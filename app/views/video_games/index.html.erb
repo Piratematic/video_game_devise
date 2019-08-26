@@ -1,0 +1,12 @@
+<%= button_to "Logout", destroy_user_session_path, method: :delete %>
+<h2>Welcome <%= current_user.first_name %></h2>
+<hr />
+<%= link_to "Add Video Game", new_video_game_path %>
+<h3>Your Video Games</h3>
+<ul>
+  <% @video_games.each do |video_games| %>
+    <li>
+      <%= video_games.name %>
+    </li>
+  <% end %>
+</ul>
