@@ -4,9 +4,9 @@
 <%= link_to "Add Video Game", new_video_game_path %>
 <h3>Your Video Games</h3>
 <ul>
-  <% @video_games.each do |video_games| %>
+  <% @video_games.each do |video_game| %>
     <li>
-      <%= video_games.name %>
+      <%= link_to video_game.name, video_game_path(video_game) %>
     </li>
   <% end %>
-</ul>
+</ul> 

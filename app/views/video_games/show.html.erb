@@ -1,2 +1,4 @@
-<h1>VideoGames#show</h1>
-<p>Find me in app/views/video_games/show.html.erb</p>
+<h1><%= @video_game.name %></h1>
+
+<%= link_to "Edit Video Game", edit_video_game_path %>
+<%= button_to "Delete", @video_game, method: :delete %> 

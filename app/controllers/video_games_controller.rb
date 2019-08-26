@@ -34,7 +34,7 @@ class VideoGamesController < ApplicationController
 
   def destroy
     @video_game.destroy
-    redirect_to video_game_path
+    redirect_to video_games_path
   end
 
   private
@@ -43,6 +43,6 @@ class VideoGamesController < ApplicationController
     end
 
     def set_video_game
-      @video_game = current_user.video_game.find(params[:id])
+      @video_game = current_user.video_games.find(params[:id])
     end
 end
