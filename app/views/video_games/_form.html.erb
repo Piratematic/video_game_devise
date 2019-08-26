@@ -1,0 +1,7 @@
+<h1><%= @video_game.id ? 'Edit Video Game' : 'Create Video Game' %></h1>
+<hr />
+<%=  form_for [@user, @video_game] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <%= f.submit %>
+<% end %>

@@ -1,2 +1,6 @@
-<h1>VideoGames#edit</h1>
-<p>Find me in app/views/video_games/edit.html.erb</p>
+<h3>Edit Video Game</h3>
+
+<%= render "form", video_game: @video_game %>
+
+<%= link_to "Show", video_game_path(@video_game) %>
+<%= link_to "Back", video_games_path %>
